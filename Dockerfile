@@ -2,10 +2,7 @@ FROM docker-registry.eyeosbcn.com/alpine6-node-base
 
 ENV WHATAMI pim
 
-ENV EYEOS_LDAP_URL ldap://ldap.service.consul/
-ENV EYEOS_LDAP_DN ou=People,dc=eyeos,dc=com
-ENV EYEOS_LDAP_ADMIN_USER cn=Manager,dc=eyeos,dc=com
-ENV EYEOS_LDAP_ADMIN_PASSWORD manager
+ENV EYEOS_IMAP_HOST imap.service.consul
 
 RUN apk update && \
     /scripts-base/buildDependencies.sh --production --install && \
